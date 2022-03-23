@@ -3,7 +3,7 @@ name: 'GitHub Actions Schedule'
 on:
   push:
   schedule:
-    - cron: '58 * * * *'
+    - cron: '40 * * * *'
 
 jobs:
   bot:
