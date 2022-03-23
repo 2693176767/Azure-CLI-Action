@@ -1,12 +1,28 @@
+name: 'GitHub Actions Schedule'
+
 on:
+  push:
   schedule:
-  - cron:  '15 * * * *'
+    - cron: '15 * * * *'
 
 jobs:
-  test_schedule:
+  bot:
     runs-on: ubuntu-latest
     steps:
-      - name: Show starting
+      - name: 'Checkout codes'
+        uses: actions/checkout@v1
+      - name: Starting
         run: echo "This step starting"
-#       - name: run azure_workflow
-#         run: workflow.yml
+        
+# on:
+#   schedule:
+#   - cron:  '15 * * * *'
+
+# jobs:
+#   test_schedule:
+#     runs-on: ubuntu-latest
+#     steps:
+#       - name: Show starting
+#         run: echo "This step starting"
+# #       - name: run azure_workflow
+# #         run: workflow.yml
