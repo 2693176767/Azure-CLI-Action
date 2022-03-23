@@ -1,6 +1,6 @@
 on:
   schedule:
-  - cron:  '00 5,17 * * *'
+  - cron:  '10 1-24 * * *'
 
 jobs:
   test_schedule:
@@ -8,5 +8,5 @@ jobs:
     steps:
       - name: Show starting
         run: echo "This step starting"
-      - name: run azure_workflow
-        run: workflow.yml
+#       - name: run azure_workflow
+#         run: workflow.yml
