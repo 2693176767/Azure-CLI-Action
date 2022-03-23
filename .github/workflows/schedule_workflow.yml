@@ -1,0 +1,13 @@
+on:
+  schedule:
+    - cron: '00 5 * * 1,3'
+    - cron: '00 5 * * 2,4'
+
+jobs:
+  test_schedule:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Show starting
+        run: echo "This step starting"
+      - name: run azure_workflow
+        run: .yml
