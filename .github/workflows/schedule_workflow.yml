@@ -10,4 +10,4 @@ jobs:
       - name: Show starting
         run: echo "This step starting"
       - name: run azure_workflow
-        run: .yml
+        run: workflow.yml
