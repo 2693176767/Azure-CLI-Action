@@ -1,7 +1,6 @@
 # File: .github/workflows/workflow.yml
- 
-on: 
-  workflow_call:
+
+on: [push]
 
 name: AzureCLISample
 
