@@ -1,24 +1,25 @@
-# # File: .github/workflows/workflow.yml
+# File: .github/workflows/workflow.yml
+ 
+on: 
+  workflow_call:
 
-# on: [push]
+name: AzureCLISample
 
-# name: AzureCLISample
+jobs:
 
-# jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
 
-#   build-and-deploy:
-#     runs-on: ubuntu-latest
-#     steps:
+    - name: Azure Login
+      uses: azure/login@v1
+      with:
+        creds: ${{ secrets.AZURE_CREDENTIALS }}
 
-#     - name: Azure Login
-#       uses: azure/login@v1
-#       with:
-#         creds: ${{ secrets.AZURE_CREDENTIALS }}
-
-#     - name: Azure CLI script
-#       uses: azure/CLI@v1
-#       with:
-#         azcliversion: 2.30.0
-#         inlineScript: |
-#           az account show
-#           az storage -h
+    - name: Azure CLI script
+      uses: azure/CLI@v1
+      with:
+        azcliversion: 2.30.0
+        inlineScript: |
+          az account show
+          az storage -h
