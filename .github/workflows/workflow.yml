@@ -22,5 +22,6 @@ jobs:
         inlineScript: |
           az extension add -n azure-cli-ml
           az account show
-          az storage -h
+          az storage container show --workspaceblob
+          #az storage -h
           #az container logs --resource-group 'Azure机器学习' --name 'workspaceblobstore'
