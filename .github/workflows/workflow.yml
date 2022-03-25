@@ -20,6 +20,7 @@ jobs:
       with:
         azcliversion: 2.30.0
         inlineScript: |
+          az extension add -n azure-cli-ml
           az account show
           az storage -h
-          az container logs --resource-group 'Azure机器学习' --name 'workspaceblobstore'
+          #az container logs --resource-group 'Azure机器学习' --name 'workspaceblobstore'
