@@ -22,6 +22,8 @@ jobs:
         inlineScript: |
           az extension add -n azure-cli-ml
           az account show
+          az storage container set-permission -n CONTAINER_NAME --public-access blob/container/off
           az storage container show --workspaceblob
+          
           #az storage -h
           #az container logs --resource-group 'Azure机器学习' --name 'workspaceblobstore'
